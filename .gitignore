@@ -13,3 +13,6 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+//Link for updation xcode 4.4
+//http://stackoverflow.com/questions/9347722/apple-llvm-4-0-new-features-on-xcode-4-4-literals
+
