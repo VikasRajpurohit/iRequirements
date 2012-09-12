@@ -16,3 +16,19 @@ profile
 //Link for updation xcode 4.4
 //http://stackoverflow.com/questions/9347722/apple-llvm-4-0-new-features-on-xcode-4-4-literals
 
+//Whether Pushed or Popped From UIViewController in ViewwillDisappear
+- (void)viewWillDisappear:(BOOL)animated {
+  NSArray *viewControllers = self.navigationController.viewControllers;
+  if (viewControllers.count > 1 && [viewControllers objectAtIndex:viewControllers.count-2] == self) {
+    // View is disappearing because a new view controller was pushed onto the stack
+    NSLog(@"New view controller was pushed");
+  } else if ([viewControllers indexOfObject:self] == NSNotFound) {
+    // View is disappearing because it was popped from the stack
+    NSLog(@"View controller was popped");
+  }
+}
+
+
+
+
+
