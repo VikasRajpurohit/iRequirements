@@ -28,7 +28,13 @@ profile
   }
 }
 
-
-
+//keyboard hides UITableViewCell Contents   UITableView Scrolling  
+    CGRect frame=CGRectMake(0, 44, self.view.frame.size.width,self.view.frame.size.height);
+    frame.size.height=frame.size.height-210;
+    [UIView beginAnimations:UIViewAnimationTransitionNone context:nil];
+    [UIView setAnimationDuration:0.5];
+    [tbl_shippingPayment setFrame:frame];
+    [tbl_shippingPayment scrollToRowAtIndexPath:[tbl_shippingPayment indexPathForCell:(UITableViewCell *)[[[textField superview]superview]superview]]  atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [UIView commitAnimations];   
 
 
