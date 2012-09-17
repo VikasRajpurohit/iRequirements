@@ -36,5 +36,7 @@ profile
     [tbl_shippingPayment setFrame:frame];
     [tbl_shippingPayment scrollToRowAtIndexPath:[tbl_shippingPayment indexPathForCell:(UITableViewCell *)[[[textField superview]superview]superview]]  atScrollPosition:UITableViewScrollPositionTop animated:YES];
     [UIView commitAnimations];   
+//Fix  syntax Intelligence Error
+//http://stackoverflow.com/questions/2138047/xcode-code-loses-syntax-coloring
 
 
